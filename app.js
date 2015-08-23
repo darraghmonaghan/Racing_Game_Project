@@ -1,12 +1,15 @@
 
 
 
+
 var player1Clicks = 0;
 var player2Clicks = 0;
 var clicksToWin = 10;
 var player1Score = 0;
 var player2Score = 0;
 var numberOfRounds = 3;
+var currentRound = 1;
+var count = 0;
 
 
 
@@ -16,10 +19,6 @@ var Player2 = new Player();
 
 // OOP Racing Game example boilerplate code
 
-
-// function getName() {
-//     var name = prompt('Please enter your name:')
-// }
 
 
 function Game(player1, player2) {
@@ -83,20 +82,23 @@ function Track() {
 
 
 function score() {
+
   if (player1Clicks >= clicksToWin) {
         player1Score ++;
         window.alert(player1.name + " wins this round!");
-        //$('#player1Score').text(player1Score);  
-        $('#player1Score').append('<td>' + player1Score + '</td>');                 /* Scoreboard update not working yet */
-        console.log('scoreboard test');
+        $('#player1Score').text(player1Score);                
         Track();
         gameOver();
+        currentRound++;
+  		$('#rounds').text(currentRound);
   } else if (player2Clicks >= clicksToWin) {
         player2Score ++;
-        window.alert(player2.name + " wins this round!");                          /* Scoreboard update not working yet */
+        window.alert(player2.name + " wins this round!");                        
         $('#player2Score').text(player2Score);
         Track();
         gameOver();
+        currentRound++;
+  		$('#rounds').text(currentRound);
   }
 }
 
@@ -104,20 +106,22 @@ function score() {
 function gameOver () {
   if (player1Score >= numberOfRounds) {
       window.alert(player1.name + " wins the game!");
+      scoreboardReset();
   } else if (player2Score >= numberOfRounds) {
       window.alert(player2.name + " wins the game!");
+      scoreboardReset();
   }
 }
 
 
-
-$('button').click( function() {
-    Track();
-    console.log('button was cliked');
-    player1Score = 0;
-    player2Score = 0;
-});
-
+function scoreboardReset () {
+	player1Score = 0;
+	player2Score = 0;
+	currentRound = 1;
+	$('#player1Score').text(player1Score);
+	$('#player2Score').text(player2Score);
+	$('#rounds').text(currentRound);
+}
 
 
 
@@ -133,6 +137,24 @@ game.init();
 
 var player1 = new Player('Darragh', $('#A1').attr('class', 'player1'));
 var player2 = new Player('Bob', $('#B1').attr('class', 'player2'));
+
+
+
+
+
+$(function() {
+    console.log( "Test - ready!" );
+
+
+
+		$('button').click( function() {
+		    Track();
+		    console.log('button was cliked');
+		    scoreboardReset();
+		});
+
+
+});
 
 
 

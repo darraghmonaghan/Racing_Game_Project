@@ -13,22 +13,28 @@ table {
 
 .lanes {
 	/*border: 2px solid gray;*/
-	width: 40px;
-	height: 40px;
+	width: 80px;
+	height: 80px;
 }
 
 
 
 
 .player1 {
-	background-color: red;
-	width: 40px;
-	height: 40px;
+	background-image: url('http://icons.iconarchive.com/icons/martin-berube/animal/256/panda-icon.png');
+	background-size: cover;
+	width: 100px;
+	height: 100px;
 }
 
 .player2 {
-	background-color: blue;
-	width: 40px;
-	height: 40px;
+	background-image: url('http://www.clker.com/cliparts/F/v/O/6/E/c/cartoon-rubber-duck-hi.png');
+	background-size: cover;
+	width: 100px;
+	height: 140px;
+}
+
+.scoreboard {
+	border-style: dashed 1px black;
 }
 
