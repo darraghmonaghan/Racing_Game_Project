@@ -1,12 +1,26 @@
 
 
 
+var player1Clicks = 0;
+var player2Clicks = 0;
+var clicksToWin = 10;
+var player1Score = 0;
+var player2Score = 0;
+var numberOfRounds = 3;
+
+
+
+
 var Player1 = new Player();
 var Player2 = new Player();
 
-
-
 // OOP Racing Game example boilerplate code
+
+
+// function getName() {
+//     var name = prompt('Please enter your name:')
+// }
+
 
 function Game(player1, player2) {
   //Create a new instance of player 1
@@ -71,18 +85,38 @@ function Track() {
 function score() {
   if (player1Clicks >= clicksToWin) {
         player1Score ++;
-        window.alert("player 1 wins this round!");
-        $('#player1Score').text(player1Score);                              /* Scoreboard update not working yet */
+        window.alert(player1.name + " wins this round!");
+        //$('#player1Score').text(player1Score);  
+        $('#player1Score').append('<td>' + player1Score + '</td>');                 /* Scoreboard update not working yet */
         console.log('scoreboard test');
         Track();
+        gameOver();
   } else if (player2Clicks >= clicksToWin) {
         player2Score ++;
-        window.alert('player 2 wins this round!');                          /* Scoreboard update not working yet */
+        window.alert(player2.name + " wins this round!");                          /* Scoreboard update not working yet */
         $('#player2Score').text(player2Score);
         Track();
+        gameOver();
   }
 }
 
+
+function gameOver () {
+  if (player1Score >= numberOfRounds) {
+      window.alert(player1.name + " wins the game!");
+  } else if (player2Score >= numberOfRounds) {
+      window.alert(player2.name + " wins the game!");
+  }
+}
+
+
+
+$('button').click( function() {
+    Track();
+    console.log('button was cliked');
+    player1Score = 0;
+    player2Score = 0;
+});
 
 
 
@@ -95,11 +129,6 @@ game.init();
 
 
 
-var player1Clicks = 0;
-var player2Clicks = 0;
-var clicksToWin = 10;
-var player1Score = 0;
-var player2Score = 0;
 
 
 var player1 = new Player('Darragh', $('#A1').attr('class', 'player1'));
