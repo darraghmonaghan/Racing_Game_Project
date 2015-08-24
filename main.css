@@ -12,7 +12,8 @@ html {
 
 
 #title {
-	background-color: #202020;
+	background-color: white;
+	font-family: 'PT Sans Caption', sans-serif;
 }
 
 h1 {
@@ -22,6 +23,11 @@ h1 {
 h2 {
 	color: #004687;
 }
+
+/*#ESPN {
+	max-width: 100%;
+}*/
+
 
 table {
 	table-layout: fixed;
@@ -57,14 +63,17 @@ table {
 	float: left;
 	padding: 80px 40px 40px 40px;
 	vertical-align: middle;
+	font-family: 'PT Sans Caption', sans-serif;
 }
 
 .scoreboard tr {
 	background-color: white;
+	margin: 5px;
 }
 
 .scoreboard tr td {
 	padding: 20px;
+	margin: 5px;
 }
 
 button {
