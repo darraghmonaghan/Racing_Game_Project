@@ -4,11 +4,11 @@
 
 var player1Clicks = 0;
 var player2Clicks = 0;
-var clicksToWin = 10;
+var clicksToWin = 9;
 var player1Score = 0;
 var player2Score = 0;
 var numberOfRounds = 3;
-var currentRound = 1;
+var currentRound = 0;
 var count = 0;
 
 

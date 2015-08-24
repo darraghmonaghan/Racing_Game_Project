@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Rrrracing Game</title>
+  <title>100m Sprint</title>
   <meta charset="utf-8" />
   <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -11,8 +11,11 @@
 </head>
 <body>
   <!-- HTML Body -->
-  <h1>Racing Game</h1>
 
+<div id='title'>
+  <h1>The 206th Animal Olympics</h1>
+      <h2>100m Sprint - Panda vs. Duck</h2>
+</div>
 <!-- Reset button -->
 
 
@@ -20,24 +23,24 @@
 
 
 <!--   <div> -->
-<table>
-    <tr>
-      <td class='scoreboard'>Round</td>
-      <td id='rounds'>1</td>
-    </tr>
-    <tr>
-      <td class='scoreboard'>Player 1</td>
-      <td id='player1Score'>0</td>
-    </tr>
-    <tr>
-      <td class='scoreboard'>Player 2</td>
-      <td id='player2Score'>0</td>
-    </tr> 
-</table> 
-
-<div class='buttonHolder'>
-    <button name="button">Reset Game!</button>
-</div>
+<div class='gameArea'>
+  <table class='scoreboard'>
+      <tr>
+        <td>Round</td>
+        <td id='rounds'>1</td>
+      </tr>
+      <tr>
+        <td>Player 1</td>
+        <td id='player1Score'>0</td>
+      </tr>
+      <tr>
+        <td>Player 2</td>
+        <td id='player2Score'>0</td>
+      </tr>
+      <tr>
+        <td colspan='2'><button name="button">Reset Game!</button></td>
+      </tr> 
+  </table> 
 
 <!--   </div> -->
   <div class='racetrack'>
@@ -68,6 +71,7 @@
       </tr>
     </table>
   </div>
+</div>
 
 
 </body>

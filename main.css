@@ -1,10 +1,27 @@
 /* Style Sheet */
 
 
-* {
+/** {
 	border: 2px solid gray;
+}*/
+
+html {
+	background-image: url("./runningtrack2.png");
+	background-size: cover;
 }
 
+
+#title {
+	background-color: #202020;
+}
+
+h1 {
+	color: #B6B6B6;
+}
+
+h2 {
+	color: #004687;
+}
 
 table {
 	table-layout: fixed;
@@ -13,12 +30,13 @@ table {
 
 .lanes {
 	/*border: 2px solid gray;*/
-	width: 80px;
+	width: 75px;
 	height: 80px;
 }
 
-
-
+.racetrack {
+	float: right;
+}
 
 .player1 {
 	background-image: url('http://icons.iconarchive.com/icons/martin-berube/animal/256/panda-icon.png');
@@ -34,7 +52,30 @@ table {
 	height: 140px;
 }
 
+
 .scoreboard {
-	border-style: dashed 1px black;
+	float: left;
+	padding: 80px 40px 40px 40px;
+	vertical-align: middle;
 }
+
+.scoreboard tr {
+	background-color: white;
+}
+
+.scoreboard tr td {
+	padding: 20px;
+}
+
+button {
+	display: inline-block;
+}
+
+
+div.racetrack {
+	vertical-align: middle;
+	padding: 80px 40px 40px 40px;
+}
+
+
 
